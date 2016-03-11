@@ -26,7 +26,28 @@ $(function(){
 	// モーダル表示
 	$('.btn-pricing').click(function(){
       $('#apply-modal').fadeIn();
+      var id = $(this).parents('.price-column').attr('id');
+      var title = $('#' + id).children('h2').text();
+      $('#course-select').val(id);
+      $('#apply-modal').children('h2').text('【' + title + '】に申し込む');
 	});
+    
+    // モーダル非表示
+    $('#close-modal').click(function(){
+      $('#apply-modal').fadeOut();
+	});
+
+	//　コラム画像
+	$('.column-image').hover(
+     function(){
+      $(this).addClass('zoom');
+      $(this).children('.zoom-black').fadeIn(300);
+      },
+      function(){
+      $(this).removeClass('zoom');
+      $(this).children('.zoom-black').fadeOut(300);
+      }
+	);
 
 
 });
