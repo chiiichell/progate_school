@@ -96,10 +96,6 @@ header {
   font-family: 'Dosis', sans-serif;
 }
 
-.header-container {
-  padding: 0px 60px 0px 60px;
-}
-
 .header-menu-right {
   float: right;
 }
@@ -115,8 +111,9 @@ header {
   padding: 10px;
 }
 
-.header-menu-right li :hover {
+.header-menu-right a :hover {
   color: #0dc0c0;
+  transition: .3s;
 }
 
 /* --Top content-- */
@@ -155,6 +152,11 @@ header {
   line-height: 30px;
 }
 
+.top-section .top-button {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -186,7 +188,7 @@ header {
   box-shadow: 0 0px 12px rgba(250, 250, 250, 0.15)
 }
 
-.btn.active {
+.btn .active {
   background-image: none;
   outline: 0;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
@@ -197,7 +199,7 @@ header {
 }
 
 
-/* --Language-- */
+/* --Languages-- */
 .languages-section {
   padding-bottom: 60px;
   color: #888;
@@ -220,6 +222,10 @@ header {
   display: none;
 }
 
+.languages-content {
+  height: 80px;
+}
+
 /* --Features-- */
 .features-section-top {
   text-align: center;
@@ -233,7 +239,7 @@ header {
 .features-box {
   display: inline-block;
   vertical-align: top;
-  width: 40%;
+  width: 44%;
   padding-left: 65px;
   padding-bottom: 60px;
   text-align: left;
@@ -248,7 +254,7 @@ header {
 .price-column {
   display: inline-block;
   vertical-align: top;
-  width: 28%;
+  width: 31%;
   padding: 25px 15px 15px 15px;
   margin: 0 1%;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
@@ -275,8 +281,8 @@ header {
   font-size: 32px;
   margin-bottom: 0;
   padding: 30px 0;
- background: #323A45;
- width: 100%;
+  background: #323A45;
+  width: 100%;
 }
 
 .price-column h3 {
@@ -301,6 +307,12 @@ header {
   background: #2d323a;
   border: 1px solid #24282e;
   color: #c9d1d6;
+}
+
+.btn-pricing :hover {
+  background: #384147;
+  border: 1px solid #32383f;
+  color: #e8edef !important;
 }
 
 /* --Modal-- */
@@ -373,15 +385,6 @@ select {
   height: 40px;
 }
 
-option {
-  font-weight: normal;
-  display: block;
-  white-space: pre;
-  min-height: 1.2em;
-  padding: 0px 2px 1px;
-}
-
-
 #submit-btn {
   display: inline-block;
   padding: 14px 160px;
@@ -391,19 +394,31 @@ option {
   color: white;
   margin: 10px auto;
   cursor: pointer;
-  width: 100px;
+  width: 400px;
 }
 
+option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
 
 /* --Mentors-- */
 .mentors-section {
   text-align: center;
+  padding-bottom: 60px;
+}
+
+#mentors > .container {
+  width: 936px;
 }
 
 .mentor-box {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .mentor-image {
@@ -414,6 +429,20 @@ option {
   border-radius: 50%;
 }
 
+#mentor-carousel img {
+  display: inline-block;
+}
+
+#mentor-carousel li {
+  background-color: #869791;
+}
+
+.carousel-indicators {
+  z-index: 5;
+}
+
+
+/* --Messages-- */
 .message-section {
   color: white;
   background: url("https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/backgrounds/night_view.jpg");
@@ -424,6 +453,7 @@ option {
 .message-section-inner {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 140px 0;
+  height: 100%;
 }
 
 .message-section h4 {
@@ -458,7 +488,12 @@ option {
   margin: 10px 5px 0 0;
   padding: 8px 16px;
   display: inline-block;
-  transition: all.3s;
+  transition: all .3s;
+}
+
+.filter-item :hover {
+  color: #fff;
+  background: #009ca8;
 }
 
 .column-box {
@@ -502,7 +537,6 @@ option {
   font-weight: 600;
 }
 
-
 /* --Contact-- */
 .contact-section {
   background: url("https://s3-ap-northeast-1.amazonaws.com/progate/lesson_images/html/practice/backgrounds/contact.jpg");
@@ -521,11 +555,7 @@ option {
   width: 58%;
 }
 
-.contact-form h4 {
-  color: white;
-}
-
-.contact-section h3 {
+.contact-section h3 .contact-section h4 {
   color: white;
 }
 
@@ -534,16 +564,7 @@ option {
   padding-bottom: 10px;
 }
 
-.contact-about h4 {
-  color: white;
-}
-
-.contact-about p {
-  margin: 0 0 24px;
-  line-height: 24px;
-}
-
-input[type="text"], textarea {
+.contact-form input[type="text"], .contact-form textarea {
   margin: 0;
   padding: 0 10px;
   vertical-align: middle;
@@ -565,6 +586,12 @@ textarea {
   height: 150px;
 }
 
+.contact-form {
+  display: inline-block;
+  vertical-align: top;
+  width: 58%;
+}
+
 .btn-contact {
   font-family: 'Dosis', sans-serif;
   font-size: 18px;
@@ -583,6 +610,21 @@ textarea {
   display: inline-block;
   vertical-align: top;
   width: 40%;
+}
+
+.contact-about i {
+  padding-right: 15px;
+  font-size: 18px;
+}
+
+.contact-about p {
+  margin: 0 0 24px;
+  line-height: 24px;
+}
+
+.error-message {
+  color: #F51414;
+  height: 20px;
 }
 
 /* --Social-- */
@@ -621,6 +663,7 @@ textarea {
   font-size: 32px;
 }
 
+/* --Footer-- */
 footer {
   text-align: center;
   padding: 39px 0 36px;

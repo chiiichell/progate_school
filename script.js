@@ -29,13 +29,18 @@ $(function(){
       var id = $(this).parents('.price-column').attr('id');
       var title = $('#' + id).children('h2').text();
       $('#course-select').val(id);
-      $('#apply-modal').children('h2').text('【' + title + '】に申し込む');
+      $('#apply-form').children('h2').text('【' + title + '】に申し込む');
 	});
     
     // モーダル非表示
     $('#close-modal').click(function(){
-      $('#apply-modal').fadeOut();
-	});
+    	$('#apply-modal').fadeOut();
+    });
+
+	// カルーススライダー部分
+	$('.carousel').carousel({
+		interval: 2500
+	})
 
 	//　コラム画像
 	$('.column-image').hover(
