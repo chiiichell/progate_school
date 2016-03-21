@@ -1,5 +1,9 @@
 
 $(function(){
+	$('header a').click(function(){
+    $("html,body").animate({scrollTop:$($(this).attr('href')).offset().top}, 500);
+    return false;
+  　})
 
 	// もっと詳しく
 	$('#read-more').click(function(){
@@ -53,6 +57,18 @@ $(function(){
       $(this).children('.zoom-black').fadeOut(300);
       }
 	);
+
+	$('.filter-item')click(function(){
+	  $('.filter-item').removeClass('active');
+	  $(this).addClass('active');
+	  var id = $(this).attr('id');
+	  if (id === 'all'){
+		$('.column-box').fadeIn();
+	  } else {
+	  $('.column-box-wrapper').children('.' + id).fadeIn();
+	  $('.column-box').not('.' + id).fadeOut();
+	  }
+	});
 
 
 });

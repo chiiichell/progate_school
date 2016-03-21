@@ -555,7 +555,8 @@ option {
   width: 58%;
 }
 
-.contact-section h3 .contact-section h4 {
+
+.contact-section h3, .contact-section h4 {
   color: white;
 }
 
