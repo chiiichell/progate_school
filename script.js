@@ -41,7 +41,7 @@ $(function(){
     	$('#apply-modal').fadeOut();
     });
 
-	// カルーススライダー部分
+	// カルーセルスライダー部分
 	$('.carousel').carousel({
 		interval: 2500
 	})
