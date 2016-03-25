@@ -58,7 +58,7 @@ $(function(){
       }
 	);
 
-	$('.filter-item')click(function(){
+	$('.filter-item').click(function(){
 	  $('.filter-item').removeClass('active');
 	  $(this).addClass('active');
 	  var id = $(this).attr('id');

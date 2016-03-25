@@ -441,6 +441,15 @@ option {
   z-index: 5;
 }
 
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
 
 /* --Messages-- */
 .message-section {
